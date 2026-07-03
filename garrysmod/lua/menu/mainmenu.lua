@@ -240,6 +240,8 @@ function UpdateServerSettings()
 
 			array.settings = {}
 			for k, v in pairs( Settings.settings ) do
+				if ( !v.name ) then continue end
+
 				local cvar = GetConVar( v.name )
 				if ( !cvar ) then continue end
 
