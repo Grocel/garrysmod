@@ -5,7 +5,7 @@ local cleanup_types = {}
 
 local function IsType( type )
 
-	for key, val in pairs( cleanup_types ) do
+	for key, val in ipairs( cleanup_types ) do
 
 		if ( val == type ) then return true end
 
@@ -19,7 +19,7 @@ function Register( type )
 
 	if ( type == "all" ) then return end
 
-	for key, val in pairs( cleanup_types ) do
+	for key, val in ipairs( cleanup_types ) do
 
 		if val == type then return end
 
